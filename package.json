@@ -1,0 +1,27 @@
+{
+  "name": "andy-api",
+  "version": "1.0.0",
+  "description": "simple api for mongo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "MIT",
+    "url": "git+https://github.com/JSambassador/andy-api.git"
+  },
+  "author": "jsambassador",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSambassador/andy-api/issues"
+  },
+  "homepage": "https://github.com/JSambassador/andy-api#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1"
+  }
+}
