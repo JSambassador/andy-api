@@ -1,8 +1,8 @@
 const path = require('path');
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
-// const geocoder = require('../utils/geocoder');
-// const Bootcamp = require('../models/Bootcamp');
+const geocoder = require('../utils/geocoder');
+const Bootcamp = require('../models/Bootcamp');
 
 // @desc      Get all bootcamps
 // @route     GET /api/v1/bootcamps
@@ -76,8 +76,8 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
     );
   }
 
-  bootcamp = await Bootcamp.findOneAndUpdate(req.params.id, req.body, {
-    new: true,
+  bootcamp = await Bootcamp.findByIdAndUpdate(req.params.id, req.body, {
+    new: true, 
     runValidators: true
   });
 
