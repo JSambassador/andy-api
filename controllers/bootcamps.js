@@ -67,7 +67,7 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
   }
 
   // Make sure user is bootcamp owner
-  if (bootcamp.user.toString() !== req.user.id && req.user.role !== 'admin') {
+  if (bootcamp.user.toString() !== req.user.id && req.user.role !== 'publisher') {
     return next(
       new ErrorResponse(
         `User ${req.params.id} is not authorized to update this bootcamp`,
